@@ -25,6 +25,7 @@ class AudioDetect {
         override fun onResult(result: List<Category>, interfaceTime: Long) {
             GlobalScope.launch(Dispatchers.Main) {
                 _result.value = result
+
             }
         }
 

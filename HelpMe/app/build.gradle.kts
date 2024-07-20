@@ -3,6 +3,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -73,6 +74,12 @@ dependencies {
     implementation(libs.tensorflow.lite.support)
     implementation(libs.tensorflow.lite.metadata)
     implementation(libs.tensorflow.lite.gpu)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.runtime.livedata)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -82,4 +89,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation (libs.tensorflow.lite.task.audio)
+
+    implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
+    implementation("com.google.firebase:firebase-analytics")
 }
